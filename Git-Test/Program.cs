@@ -10,10 +10,24 @@ namespace Git_Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Thinking of a number between 1-100...");
+            Console.WriteLine("RANDOM NUMBER GUESSING GAME");
+            Console.WriteLine("***************************");
+            Console.WriteLine("\nChoose the minimum number in the range: ");
+
+            int min = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("\nChoose the maximum number in the range: ");
+
+            int max = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("\nThinking of a number between ");
+            Console.Write(min);
+            Console.Write(" and ");
+            Console.Write(max);
+            Console.Write("...\n");
 
             Random r = new Random();
-            int n = r.Next(0,100);
+            int n = r.Next(min,max);
 
             bool lp = true;
             int tries = 1;
